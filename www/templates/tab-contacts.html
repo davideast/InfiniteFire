@@ -1,0 +1,29 @@
+<ion-view view-title="Contacts">
+  <ion-content class="padding">
+
+    <div class="list card" ng-repeat="item in items">
+      <div class="item item-avatar">
+        <img ng-src="http://robohash.org/{{item.name}}">
+        <h2>{{ item.name }}</h2>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="http://robohash.org/{{item.name}}">
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-ios7-telephone"></i>
+          Call
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-email"></i>
+          Email
+        </a>
+      </div>
+    </div>
+
+     <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>
