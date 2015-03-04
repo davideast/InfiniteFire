@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['firebase'])
 
-.controller('ContactsCtrl', function($scope, $firebaseArray, People) {
+.controller('ContactsCtrl', function($scope, $firebaseArray) {
 
   var baseRef = new Firebase('https://webapi.firebaseio.com/rolodex');
   var scrollRef = new Firebase.util.Scroll(baseRef, 'name');
