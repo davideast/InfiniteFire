@@ -1,5 +1,5 @@
 
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('infinite-fire', ['ionic', 'infinite-fire.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
